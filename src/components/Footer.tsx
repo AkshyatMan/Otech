@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 O.Tech Pvt. Ltd. All rights reserved. | Total Technical Solution Since 2008</p>
+          <p>&copy; 2025 O.Tech Pvt. Ltd. All rights reserved. | Total Technical Solution Since 2008</p>
         </div>
       </div>
     </footer>

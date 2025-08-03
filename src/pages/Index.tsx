@@ -15,44 +15,35 @@ import energyImage2 from "@/assets/otech-hero.jpg";
 import tradeImage from "@/assets/duckhamLubricants.jpg";
 import servivesLogo from "@/assets/ServicesLogo.png";
 import placeholder from "/public/placeholder.svg"; // Temporary import for About Us image
-
+import telecommunication from "../assets/telecommunication.png";
+import Construction from "../assets/Construction.png";
+import solar from "../assets/solar.png";
+import trade from "../assets/trade.png";
 const Index = () => {
-  const services = [
-    { 
-      icon: <Building2 className="h-8 w-8" />, 
-      title: "Telecom & IT", 
+ const services = [
+    {
+      icon: <img src={telecommunication} alt="Telecom & IT" className="h-20 w-20" />,
+      title: "Telecom & IT",
       path: "/services",
-      description: "RF planning, FTTH, tower infrastructure"
+      description: "O.Tech Pvt Ltd is a leading telecom infrastructure and IT Solution company in Nepal. "
     },
-    { 
-      icon: <Wrench className="h-8 w-8" />, 
-      title: "Construction", 
+    {
+      icon: <img src={Construction} alt="Construction" className="h-20 w-20" />,
+      title: "Construction",
       path: "/services",
-      description: "Civil engineering via Danfe JV"
+      description: "O.Tech Construction has a team of highly qualified and experienced Engineers, Architects, Consultants and Managers."
     },
-    { 
-      icon: <Zap className="h-8 w-8" />, 
-      title: "Energy", 
+    {
+      icon: <img src={solar} alt="Energy" className="h-20 w-20" />,
+      title: "Energy",
       path: "/services",
-      description: "14.4 MW solar EPC delivered"
+      description: "O.tech Trade P. Ltd. is the sole nationwide distributor of Duckhams brand lubricants"
     },
-    { 
-      icon: <Fuel className="h-8 w-8" />, 
-      title: "Trade", 
+    {
+      icon: <img src={trade} alt="Trade" className="h-20 w-20" />,
+      title: "Trade",
       path: "/services",
-      description: "Duckhams lubricants distribution"
-    },
-    { 
-      icon: <Briefcase className="h-8 w-8" />, 
-      title: "Projects", 
-      path: "/projects",
-      description: "Case studies and deliverables"
-    },
-    { 
-      icon: <Users className="h-8 w-8" />, 
-      title: "Careers", 
-      path: "/careers",
-      description: "Join our growing team"
+      description: "Our service includes technical planning, turnkey delivery (EPC) and operation and maintenance (O&M) of the projects."
     },
   ];
 
@@ -147,7 +138,7 @@ const Index = () => {
       <section className="py-16 bg-accent">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 text-blue-400">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-400">
               Our Service Areas
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -158,7 +149,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {services.map((service, index) => (
               <Link key={index} to={service.path}>
-                <Card className="h-full hover:shadow-lg smooth-transition group cursor-pointer">
+                <Card className="h-full hover:shadow-lg smooth-transition group cursor-pointer bg-transparent border-0">
                   <CardContent className="p-6 flex items-start"> {/* Added flex and items-start */}
   <div className="mr-6 flex-shrink-0"> {/* Added mr-6 and flex-shrink-0 */}
     {/* Make icon larger - adjust 'h-20 w-20' as needed */}
@@ -167,7 +158,7 @@ const Index = () => {
     </div>
   </div>
   <div> {/* This div will contain the text content */}
-    <h3 className="text-xl font-semibold text-primary mb-2">
+    <h3 className="text-xl font-semibold text-primary mb-2">  
       {service.title}
     </h3>
     <p className="text-muted-foreground mb-4">
@@ -203,6 +194,30 @@ const Index = () => {
           </Link>
         </div>
       </section> */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-400">
+              Our Clients
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We've worked together with a number of national and international brands.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center">
+            <img src="/public/ooreeoo-logo.png" alt="Ooredoo Myanmar" className="h-20 object-contain mx-auto" />
+            <img src="/public/nepal-telecom.webp" alt="Nepal Telecom" className="h-20 object-contain mx-auto" />
+            <img src="/public/ncell.png" alt="Ncell" className="h-20 object-contain mx-auto" />
+            <img src="/public/smartcell.png" alt="Smart Cell" className="h-20 object-contain mx-auto" />
+            <img src="/public/cg-telecom.png" alt="CG Telecom" className="h-20 object-contain mx-auto" />
+            <img src="/public/CAAN_LOGO.png" alt="Civil Aviation Authority of Nepal" className="h-20 object-contain mx-auto" />
+            <img src="/public/BKS.png" alt="Budhanilkantha School" className="h-20 object-contain mx-auto" />
+            <img src="/public/cultural-corporation.png" alt="Cultural Corporation" className="h-20 object-contain mx-auto" />
+            <img src="/public/RBN.png" alt="Prabhu Bank" className="h-20 object-contain mx-auto" />
+            <img src="/public/department_of_roads.png" alt="Government of Nepal, Department of Roads" className="h-20 object-contain mx-auto" />
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
