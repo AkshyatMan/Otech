@@ -6,17 +6,10 @@ import { Building2, Zap, Wrench, Fuel, Users, Briefcase, ArrowRight, Radio, Sett
 import Layout from "@/components/Layout";
 import CounterAnimation from "@/components/CounterAnimation";
 import heroVideo from "@/assets/Construction.webm";
-import constructionImage1 from "@/assets/otech-hero.jpg";
-import constructionImage2 from "@/assets/otech-hero.jpg";
-import telecomImage1 from "@/assets/tower.jpg";
-import telecomImage2 from "@/assets/rural telecom.jpg";
-import energyImage1 from "@/assets/otech-hero.jpg";
-import energyImage2 from "@/assets/otech-hero.jpg";
-import tradeImage from "@/assets/duckhamLubricants.jpg";
 import servivesLogo from "@/assets/ServicesLogo.png";
-import placeholder from "/public/placeholder.svg"; // Temporary import for About Us image
+
 import telecommunication from "../assets/telecommunication.png";
-import Construction from "../assets/Construction.png";
+import Construction from "../assets/construction.png";
 import solar from "../assets/solar.png";
 import trade from "../assets/trade.png";
 const Index = () => {
@@ -221,5 +214,4 @@ const Index = () => {
     </Layout>
   );
 };
-
 export default Index;
