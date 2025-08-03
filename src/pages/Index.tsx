@@ -205,16 +205,16 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center">
-            <img src="/public/ooreeoo-logo.png" alt="Ooredoo Myanmar" className="h-20 object-contain mx-auto" />
-            <img src="/public/nepal-telecom.webp" alt="Nepal Telecom" className="h-20 object-contain mx-auto" />
-            <img src="/public/ncell.png" alt="Ncell" className="h-20 object-contain mx-auto" />
-            <img src="/public/smartcell.png" alt="Smart Cell" className="h-20 object-contain mx-auto" />
-            <img src="/public/cg-telecom.png" alt="CG Telecom" className="h-20 object-contain mx-auto" />
-            <img src="/public/CAAN_LOGO.png" alt="Civil Aviation Authority of Nepal" className="h-20 object-contain mx-auto" />
-            <img src="/public/BKS.png" alt="Budhanilkantha School" className="h-20 object-contain mx-auto" />
-            <img src="/public/cultural-corporation.png" alt="Cultural Corporation" className="h-20 object-contain mx-auto" />
-            <img src="/public/RBN.png" alt="Prabhu Bank" className="h-20 object-contain mx-auto" />
-            <img src="/public/department_of_roads.png" alt="Government of Nepal, Department of Roads" className="h-20 object-contain mx-auto" />
+            <img src="/ooreeoo-logo.png" alt="Ooredoo Myanmar" className="h-20 object-contain mx-auto" />
+            <img src="/nepal-telecom.webp" alt="Nepal Telecom" className="h-20 object-contain mx-auto" />
+            <img src="/ncell.png" alt="Ncell" className="h-20 object-contain mx-auto" />
+            <img src="/smartcell.png" alt="Smart Cell" className="h-20 object-contain mx-auto" />
+            <img src="/CG-Telecom.png" alt="CG Telecom" className="h-20 object-contain mx-auto" />
+            <img src="/CAAN_LOGO.png" alt="Civil Aviation Authority of Nepal" className="h-20 object-contain mx-auto" />
+            <img src="/BKS.png" alt="Budhanilkantha School" className="h-20 object-contain mx-auto" />
+            <img src="/cultural-corporation.png" alt="Cultural Corporation" className="h-20 object-contain mx-auto" />
+            <img src="/RBN.png" alt="Prabhu Bank" className="h-20 object-contain mx-auto" />
+            <img src="/department_of_roads.png" alt="Government of Nepal, Department of Roads" className="h-20 object-contain mx-auto" />
           </div>
         </div>
       </section>
