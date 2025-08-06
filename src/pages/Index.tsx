@@ -2,7 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Building2, Zap, Wrench, Fuel, Users, Briefcase, ArrowRight, Radio, Settings, Sun, Droplet } from "lucide-react";
+import {
+  Building2,
+  Zap,
+  Wrench,
+  Fuel,
+  Users,
+  Briefcase,
+  ArrowRight,
+  Radio,
+  Settings,
+  Sun,
+  Droplet,
+} from "lucide-react";
 import Layout from "@/components/Layout";
 import SwiggleLine from "@/components/SwiggleLine";
 import CounterAnimation from "@/components/CounterAnimation";
@@ -16,28 +28,34 @@ import trade from "../assets/trade.png";
 const Index = () => {
   const services = [
     {
-      icon: <img src={telecommunication} alt="Telecom & IT" className="h-20 w-20" />,
+      icon: (
+        <img src={telecommunication} alt="Telecom & IT" className="h-20 w-20" />
+      ),
       title: "Telecom & IT",
       path: "/services",
-      description: "O.Tech Pvt Ltd is a leading telecom infrastructure and IT Solution company in Nepal. "
+      description:
+        "O.Tech Pvt Ltd is a leading telecom infrastructure and IT Solution company in Nepal. ",
     },
     {
       icon: <img src={Construction} alt="Construction" className="h-20 w-20" />,
       title: "Construction",
       path: "/services",
-      description: "O.Tech Construction has a team of highly qualified and experienced Engineers, Architects, Consultants and Managers."
+      description:
+        "O.Tech Construction has a team of highly qualified and experienced Engineers, Architects, Consultants and Managers.",
     },
     {
       icon: <img src={solar} alt="Energy" className="h-20 w-20" />,
       title: "Energy",
       path: "/services",
-      description: "O.tech Trade P. Ltd. is the sole nationwide distributor of Duckhams brand lubricants"
+      description:
+        "O.tech Trade P. Ltd. is the sole nationwide distributor of Duckhams brand lubricants",
     },
     {
       icon: <img src={trade} alt="Trade" className="h-20 w-20" />,
       title: "Trade",
       path: "/services",
-      description: "Our service includes technical planning, turnkey delivery (EPC) and operation and maintenance (O&M) of the projects."
+      description:
+        "Our service includes technical planning, turnkey delivery (EPC) and operation and maintenance (O&M) of the projects.",
     },
   ];
 
@@ -51,7 +69,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center -mt-16">
+      <section className="relative h-screen w-full flex items-center -mt-16">
         <video
           className="absolute top-0 left-0 object-cover w-full h-full"
           src={heroVideo}
@@ -64,29 +82,52 @@ const Index = () => {
         </video>
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 md:text-left text-center">
-          {/* <Badge variant="secondary" className="mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Total Technical Solution · Since 2008
-          </Badge> */}
+        {/* Content container aligned with navigation */}
+        <div className="relative z-10 w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl flex flex-col md:text-left text-center">
+              {/* <Badge variant="secondary" className="mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          Total Technical Solution · Since 2008
+        </Badge> */}
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            O.Tech Pvt. Ltd.
-          </h1>
+              <h1
+                className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in"
+                style={{ animationDelay: "0.4s" }}
+              >
+                O.Tech Pvt. Ltd.
+              </h1>
 
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto md:mx-0 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            Delivering Nepal's infrastructure growth with cross-sector reliability across telecom, construction, energy, and trade sectors.
-          </p>
+              <p
+                className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto md:mx-0 animate-fade-in"
+                style={{ animationDelay: "0.6s" }}
+              >
+                Delivering Nepal's infrastructure growth with cross-sector
+                reliability across telecom, construction, energy, and trade
+                sectors.
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in" style={{ animationDelay: "0.8s" }}>
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-red-700 hover-scale transform transition-all duration-300 hover:shadow-lg">
-              Explore Our Services
-              <ArrowRight className="ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="hover-scale transform transition-all duration-300 hover:shadow-lg">
-                Contact Us
-              </Button>
-            </Link>
+              <div
+                className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in"
+                style={{ animationDelay: "0.8s" }}
+              >
+                <Button
+                  size="lg"
+                  className="group bg-blue-600 text-white hover:bg-blue-700 hover-scale transform transition-all duration-300 hover:shadow-lg"
+                >
+                  Explore Our Services
+                  <ArrowRight className="ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-1" />
+                </Button>
+                <Link to="/contact">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="hover-scale transform transition-all duration-300 hover:shadow-lg"
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -94,17 +135,30 @@ const Index = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-bold text-center mb-8 text-blue-600">About Us</h3>
-            <h2 className="text-4xl font-bold mb-4">Nepal's most trusted technical solution provider across telecom, construction, energy, and trade sectors.</h2>
+            <h3 className="text-2xl font-bold text-center mb-8 text-blue-400">
+              About Us
+            </h3>
+            <h2 className="text-4xl font-bold mb-4">
+              Nepal's most trusted technical solution provider across telecom,
+              construction, energy, and trade sectors.
+            </h2>
             <p className="text-muted-foreground mb-4">
-              We deliver comprehensive technical solutions that drive Nepal's infrastructure growth, combining local expertise with international standards across multiple sectors.
+              We deliver comprehensive technical solutions that drive Nepal's
+              infrastructure growth, combining local expertise with
+              international standards across multiple sectors.
             </p>
             <p className="text-muted-foreground mb-4">
-              We are committed to excellence, reliability, and innovation in everything we do, ensuring our clients receive world-class service and sustainable solutions.
+              We are committed to excellence, reliability, and innovation in
+              everything we do, ensuring our clients receive world-class service
+              and sustainable solutions.
             </p>
           </div>
           <div>
-            <img src={servivesLogo} alt="Logistics Industry" className="rounded-lg w-full h-auto object-cover" />
+            <img
+              src={servivesLogo}
+              alt="Logistics Industry"
+              className="rounded-lg w-full h-auto object-cover"
+            />
           </div>
         </div>
       </section>
@@ -113,10 +167,16 @@ const Index = () => {
       {/* Enablers for your business growth (Counter Animation Section) */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-center mb-8 text-blue-600">Enablers for your infrastructure growth</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-blue-400">
+            Enablers for your infrastructure growth
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 border rounded-lg shadow-md animate-fade-in hover-scale transform transition-all duration-300" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div
+                key={index}
+                className="text-center p-6 border rounded-lg shadow-md animate-fade-in hover-scale transform transition-all duration-300"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 <CounterAnimation
                   targetValue={stat.value}
                   className="text-3xl md:text-4xl font-bold text-primary mb-2"
@@ -130,7 +190,6 @@ const Index = () => {
       </section>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
 
-
       {/* Services Grid */}
       <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4">
@@ -139,7 +198,8 @@ const Index = () => {
               Our Service Areas
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive technical solutions across multiple sectors, delivering excellence since 2008.
+              Comprehensive technical solutions across multiple sectors,
+              delivering excellence since 2008.
             </p>
           </div>
 
@@ -147,14 +207,20 @@ const Index = () => {
             {services.map((service, index) => (
               <Link key={index} to={service.path}>
                 <Card className="h-full hover:shadow-lg smooth-transition group cursor-pointer bg-transparent border-0">
-                  <CardContent className="p-6 flex items-start"> {/* Added flex and items-start */}
-                    <div className="mr-6 flex-shrink-0"> {/* Added mr-6 and flex-shrink-0 */}
+                  <CardContent className="p-6 flex items-start">
+                    {" "}
+                    {/* Added flex and items-start */}
+                    <div className="mr-6 flex-shrink-0">
+                      {" "}
+                      {/* Added mr-6 and flex-shrink-0 */}
                       {/* Make icon larger - adjust 'h-20 w-20' as needed */}
                       <div className="text-blue-500 h-20 w-20 flex items-center justify-center">
                         {service.icon}
                       </div>
                     </div>
-                    <div> {/* This div will contain the text content */}
+                    <div>
+                      {" "}
+                      {/* This div will contain the text content */}
                       <h3 className="text-xl font-semibold text-primary mb-2">
                         {service.title}
                       </h3>
@@ -181,36 +247,116 @@ const Index = () => {
               Our Clients
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We've worked together with a number of national and international brands.
+              We've worked together with a number of national and international
+              brands.
             </p>
           </div>
           <div className="overflow-hidden whitespace-nowrap py-4 relative w-full">
             <div className="flex animate-marquee w-[200%]">
               <div className="flex items-center justify-around min-w-full">
-                <img src="/Ooreeoo-logo.png" alt="Ooredoo Myanmar" className="h-20 object-contain mx-4" />
-                <img src="/nepal-telecom.webp" alt="Nepal Telecom" className="h-20 object-contain mx-4" />
-                <img src="/ncell.png" alt="Ncell" className="h-20 object-contain mx-4" />
-                <img src="/smartcell.png" alt="Smart Cell" className="h-20 object-contain mx-4" />
-                <img src="/CG-Telecom.png" alt="CG Telecom" className="h-20 object-contain mx-4" />
-                <img src="/CAAN_LOGO.png" alt="Civil Aviation Authority of Nepal" className="h-20 object-contain mx-4" />
-                <img src="/BKS.png" alt="Budhanilkantha School" className="h-20 object-contain mx-4" />
-                <img src="/cultural-corporation.png" alt="Cultural Corporation" className="h-20 object-contain mx-4" />
-                <img src="/RBN.png" alt="Prabhu Bank" className="h-20 object-contain mx-4" />
-                <img src="/GON.png" alt="Government of Nepal, Department of Roads" className="h-20 object-contain mx-4" />
+                <img
+                  src="/Ooreeoo-logo.png"
+                  alt="Ooredoo Myanmar"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/nepal-telecom.webp"
+                  alt="Nepal Telecom"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/ncell.png"
+                  alt="Ncell"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/smartcell.png"
+                  alt="Smart Cell"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/CG-Telecom.png"
+                  alt="CG Telecom"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/CAAN_LOGO.png"
+                  alt="Civil Aviation Authority of Nepal"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/BKS.png"
+                  alt="Budhanilkantha School"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/cultural-corporation.png"
+                  alt="Cultural Corporation"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/RBN.png"
+                  alt="Prabhu Bank"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/GON.png"
+                  alt="Government of Nepal, Department of Roads"
+                  className="h-20 object-contain mx-4"
+                />
               </div>
               <div className="flex items-center justify-around min-w-full">
-                <img src="/Ooreeoo-logo.png" alt="Ooredoo Myanmar" className="h-20 object-contain mx-4" />
-                <img src="/nepal-telecom.webp" alt="Nepal Telecom" className="h-20 object-contain mx-4" />
-                <img src="/ncell.png" alt="Ncell" className="h-20 object-contain mx-4" />
-                <img src="/smartcell.png" alt="Smart Cell" className="h-20 object-contain mx-4" />
-                <img src="/CG-Telecom.png" alt="CG Telecom" className="h-20 object-contain mx-4" />
-                <img src="/CAAN_LOGO.png" alt="Civil Aviation Authority of Nepal" className="h-20 object-contain mx-4" />
-                <img src="/BKS.png" alt="Budhanilkantha School" className="h-20 object-contain mx-4" />
-                <img src="/cultural-corporation.png" alt="Cultural Corporation" className="h-20 object-contain mx-4" />
-                <img src="/RBN.png" alt="Prabhu Bank" className="h-20 object-contain mx-4" />
-                <img src="/GON.png" alt="Government of Nepal, Department of Roads" className="h-20 object-contain mx-4" />
+                <img
+                  src="/Ooreeoo-logo.png"
+                  alt="Ooredoo Myanmar"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/nepal-telecom.webp"
+                  alt="Nepal Telecom"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/ncell.png"
+                  alt="Ncell"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/smartcell.png"
+                  alt="Smart Cell"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/CG-Telecom.png"
+                  alt="CG Telecom"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/CAAN_LOGO.png"
+                  alt="Civil Aviation Authority of Nepal"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/BKS.png"
+                  alt="Budhanilkantha School"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/cultural-corporation.png"
+                  alt="Cultural Corporation"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/RBN.png"
+                  alt="Prabhu Bank"
+                  className="h-20 object-contain mx-4"
+                />
+                <img
+                  src="/GON.png"
+                  alt="Government of Nepal, Department of Roads"
+                  className="h-20 object-contain mx-4"
+                />
               </div>
-
             </div>
           </div>
         </div>
@@ -268,10 +414,14 @@ const Index = () => {
             Ready to Partner With Us?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Let's discuss how O.Tech can deliver total technical solutions for your next project.
+            Let's discuss how O.Tech can deliver total technical solutions for
+            your next project.
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+            >
               Get Started Today
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
