@@ -66,7 +66,7 @@ const Contact = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
 
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Contact O.Tech
+            Contact Us
           </h1>
           <p className="text-xl text-white">
             Ready to start your next infrastructure project? Let's discuss how our total technical solutions can meet your needs.
