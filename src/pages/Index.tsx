@@ -94,7 +94,7 @@ const Index = () => {
                 className="text-5xl md:text-7xl font-bold text-blue-500 mb-6 animate-fade-in "
                 style={{ animationDelay: "0.4s" }}
               >
-                <span className="text-orange-400">O</span>.Tech <span className="text-white"> Pvt. Ltd. </span>
+                <span className="text-orange-400">O</span><span className="text-white">.</span>Tech <span className="text-white"> Pvt. Ltd. </span>
               </h1>
 
               <p
@@ -252,60 +252,8 @@ const Index = () => {
             </p>
           </div>
           <div className="overflow-hidden whitespace-nowrap py-4 relative w-full">
-            <div className="flex animate-marquee w-[200%]">
-              <div className="flex items-center justify-around min-w-full">
-                <img
-                  src="/Ooreeoo-logo.png"
-                  alt="Ooredoo Myanmar"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/nepal-telecom.webp"
-                  alt="Nepal Telecom"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/ncell.png"
-                  alt="Ncell"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/smartcell.png"
-                  alt="Smart Cell"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/CG-Telecom.png"
-                  alt="CG Telecom"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/CAAN_LOGO.png"
-                  alt="Civil Aviation Authority of Nepal"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/BKS.png"
-                  alt="Budhanilkantha School"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/cultural-corporation.png"
-                  alt="Cultural Corporation"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/RBN.png"
-                  alt="Prabhu Bank"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/GON.png"
-                  alt="Government of Nepal, Department of Roads"
-                  className="h-20 object-contain mx-4"
-                />
-              </div>
-              <div className="flex items-center justify-around min-w-full">
+            <div className="flex w-full">
+              <div className="flex animate-marquee items-center justify-around min-w-full">
                 <img
                   src="/Ooreeoo-logo.png"
                   alt="Ooredoo Myanmar"

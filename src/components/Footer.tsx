@@ -12,12 +12,12 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <div>
                 <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src={otechLogo} 
-              alt="O.Tech Logo" 
-              className="h-20 w-auto" 
-            />
-          </Link>
+                  <img
+                    src={otechLogo}
+                    alt="O.Tech Logo"
+                    className="h-20 w-auto"
+                  />
+                </Link>
               </div>
             </div>
             <p className="text-sm text-gray-300">
@@ -31,11 +31,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="h-4 w-4 text-gray-300" />
-                <span>Swet Binayak Marg, Dhobighat, Lalitpur, Nepal</span>
+                <span>Sanepa, Lalitpur, Nepal</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="h-4 w-4 text-gray-300" />
-                <span>+977-123456789</span>
+                <span>+977 9802033712</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="h-4 w-4 text-gray-300" />
@@ -59,19 +59,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-white">Connect With Us</h3>
             <div className="flex space-x-2">
-              <Button variant="ghost" size="icon" className="h-8 w-8">
+              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => window.open('https://www.facebook.com/otechnepal/', '_blank')}>
                 <Facebook className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8">
+              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => window.open('https://www.linkedin.com/company/otechgroup/', '_blank')}>
                 <Linkedin className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8">
+              {/* <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => window.open('https://twitter.com/otechpvt_ltd', '_blank')}>
                 <Twitter className="h-4 w-4" />
-              </Button>
+              </Button> */}
             </div>
             <div className="space-y-2 text-sm text-gray-300">
               <p>Branch Locations:</p>
-              <p>Kathmandu Valley: Nakhu, Balaju, Chabahil</p>
+              <p>Kathmandu Valley: Sanepa, Swet Binayak Marg</p>
               <p>Outside Valley: Pokhara, Nepalgunj, Biratnagar</p>
             </div>
           </div>
