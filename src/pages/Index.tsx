@@ -3,17 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {
-  Building2,
-  Zap,
-  Wrench,
-  Fuel,
-  Users,
-  Briefcase,
   ArrowRight,
-  Radio,
-  Settings,
-  Sun,
-  Droplet,
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SwiggleLine from "@/components/SwiggleLine";
@@ -86,9 +76,6 @@ const Index = () => {
         <div className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl flex flex-col md:text-left text-center">
-              {/* <Badge variant="secondary" className="mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          Total Technical Solution · Since 2008
-        </Badge> */}
 
               <h1
                 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in"
