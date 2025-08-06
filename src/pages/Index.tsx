@@ -91,10 +91,10 @@ const Index = () => {
         </div>
       </section>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-bold text-center mb-8 text-blue-400">About Us</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 text-blue-600">About Us</h3>
             <h2 className="text-4xl font-bold mb-4">Nepal's most trusted technical solution provider across telecom, construction, energy, and trade sectors.</h2>
             <p className="text-muted-foreground mb-4">
               We deliver comprehensive technical solutions that drive Nepal's infrastructure growth, combining local expertise with international standards across multiple sectors.
@@ -111,9 +111,9 @@ const Index = () => {
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
 
       {/* Enablers for your business growth (Counter Animation Section) */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-center mb-8 text-blue-400">Enablers for your infrastructure growth</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-blue-600">Enablers for your infrastructure growth</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center p-6 border rounded-lg shadow-md animate-fade-in hover-scale transform transition-all duration-300" style={{ animationDelay: `${index * 0.2}s` }}>
@@ -132,10 +132,10 @@ const Index = () => {
 
 
       {/* Services Grid */}
-      <section className="py-16 bg-accent">
+      <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-400">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
               Our Service Areas
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -174,10 +174,10 @@ const Index = () => {
         </div>
       </section>
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-400">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
               Our Clients
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -217,8 +217,52 @@ const Index = () => {
       </section>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-blue-600 text-lg font-semibold mb-2">Testimonials</h3>
+            <h2 className="text-4xl font-bold text-gray-800">The Voice of Our Customers</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Text Testimonial 1 */}
+            <div className="bg-white rounded-lg shadow-md p-6 relative">
+              <div className="absolute top-4 right-4 ">
+              </div>
+              <h3 className="font-semibold text-lg">Noyana Syacchyon</h3>
+              <p className="text-sm text-gray-600">Project Lead - NELP</p>
+              <br />
+              <p className="text-gray-700 mb-4">"O.Tech is more than just a company. With their help, we could deliver electricity to the toughest areas of Nepal, making the country brighter, safer, and more developed.""</p>
+            </div>
+
+            {/* Text Testimonial 2 */}
+            <div className="bg-white rounded-lg shadow-md p-6 relative">
+              <div className="absolute top-4 right-4 ">
+
+              </div>
+              <h3 className="font-semibold text-lg">Prajwal Ojha</h3>
+              <p className="text-sm text-gray-600">CEO - OGBB International Law Firm</p>
+              <br />
+              <p className="text-gray-700 mb-4">O.Tech took care of our office building construction very smoothly. With a set of highly experienced team members, together they give you the best service available in Nepal"</p>
+            </div>
+
+            {/* Text Testimonial 3 */}
+            <div className="bg-white rounded-lg shadow-md p-6 relative">
+              <div className="absolute top-4 right-4">
+              </div>
+              <h3 className="font-semibold text-lg">Kartabya Aryal</h3>
+              <p className="text-sm text-gray-600">CEO - Visual Workshop</p>
+              <br />
+              <p className="text-gray-700 mb-4">"We had a dream of turning our offices fully solar powered. I'm glad we found O.Tech to get it done. Very well done!"</p>
+            </div>
+          </div>
+        </div>
+        <SwiggleLine className="w-full h-20 text-accent -mt-16" />
+      </section>
+
+      <SwiggleLine className="w-full h-20 text-white -mt-16" />
       {/* CTA Section */}
-      <section className="py-16 bg-accent">
+      <section className="py-20 bg-accent">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Ready to Partner With Us?
@@ -234,7 +278,8 @@ const Index = () => {
           </Link>
         </div>
       </section>
-    </Layout>
+      <SwiggleLine className="w-full h-20 text-accent -mt-16" />
+    </Layout >
   );
 };
 export default Index;
