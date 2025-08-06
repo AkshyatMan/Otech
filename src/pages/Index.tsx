@@ -78,10 +78,10 @@ const Index = () => {
             <div className="max-w-4xl flex flex-col md:text-left text-center">
 
               <h1
-                className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in"
+                className="text-5xl md:text-7xl font-bold text-blue-500 mb-6 animate-fade-in "
                 style={{ animationDelay: "0.4s" }}
               >
-                O.Tech Pvt. Ltd.
+                <span className="text-orange-400">O</span><span className="text-white">.</span>Tech <span className="text-white"> Pvt. Ltd. </span>
               </h1>
 
               <p
@@ -122,13 +122,13 @@ const Index = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-bold text-center mb-8 text-blue-400">
+            <h2 className="text-4xl font-bold text-left mb-8 text-blue-600">
               About Us
-            </h3>
-            <h2 className="text-4xl font-bold mb-4">
+            </h2>
+            <h3 className="text-2xl font-bold mb-4">
               Nepal's most trusted technical solution provider across telecom,
               construction, energy, and trade sectors.
-            </h2>
+            </h3>
             <p className="text-muted-foreground mb-4">
               We deliver comprehensive technical solutions that drive Nepal's
               infrastructure growth, combining local expertise with
@@ -154,9 +154,9 @@ const Index = () => {
       {/* Enablers for your business growth (Counter Animation Section) */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-center mb-8 text-blue-400">
+          <h2 className="text-4xl font-bold text-left mb-8 text-blue-600">
             Enablers for your infrastructure growth
-          </h3>
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div
@@ -180,11 +180,11 @@ const Index = () => {
       {/* Services Grid */}
       <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-left mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
               Our Service Areas
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground">
               Comprehensive technical solutions across multiple sectors,
               delivering excellence since 2008.
             </p>
@@ -239,60 +239,8 @@ const Index = () => {
             </p>
           </div>
           <div className="overflow-hidden whitespace-nowrap py-4 relative w-full">
-            <div className="flex animate-marquee w-[200%]">
-              <div className="flex items-center justify-around min-w-full">
-                <img
-                  src="/Ooreeoo-logo.png"
-                  alt="Ooredoo Myanmar"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/nepal-telecom.webp"
-                  alt="Nepal Telecom"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/ncell.png"
-                  alt="Ncell"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/smartcell.png"
-                  alt="Smart Cell"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/CG-Telecom.png"
-                  alt="CG Telecom"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/CAAN_LOGO.png"
-                  alt="Civil Aviation Authority of Nepal"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/BKS.png"
-                  alt="Budhanilkantha School"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/cultural-corporation.png"
-                  alt="Cultural Corporation"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/RBN.png"
-                  alt="Prabhu Bank"
-                  className="h-20 object-contain mx-4"
-                />
-                <img
-                  src="/GON.png"
-                  alt="Government of Nepal, Department of Roads"
-                  className="h-20 object-contain mx-4"
-                />
-              </div>
-              <div className="flex items-center justify-around min-w-full">
+            <div className="flex w-full">
+              <div className="flex animate-marquee items-center justify-around min-w-full">
                 <img
                   src="/Ooreeoo-logo.png"
                   alt="Ooredoo Myanmar"
@@ -351,11 +299,11 @@ const Index = () => {
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-blue-600 text-lg font-semibold mb-2">Testimonials</h3>
-            <h2 className="text-4xl font-bold text-gray-800">The Voice of Our Customers</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-600">Testimonials</h2>
+            <h3 className="text-2xl font-bold text-gray-800">The Voice of Our Customers</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Text Testimonial 1 */}
@@ -397,7 +345,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-accent">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600">
             Ready to Partner With Us?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
@@ -407,7 +355,7 @@ const Index = () => {
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="group bg-blue-600 text-white hover:bg-blue-700 hover-scale transform transition-all duration-300 hover:shadow-lg"
             >
               Get Started Today
               <ArrowRight className="ml-2 h-4 w-4" />
