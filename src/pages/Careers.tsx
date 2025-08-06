@@ -149,7 +149,6 @@ const Careers = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <CardContent className="space-y-6">
-              <div className="text-6xl mb-6">🚀</div>
               <h2 className="text-3xl font-bold text-primary mb-2">
                 No Current Openings
               </h2>

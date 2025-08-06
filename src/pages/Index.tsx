@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import SwiggleLine from "@/components/SwiggleLine";
 import CounterAnimation from "@/components/CounterAnimation";
@@ -76,12 +73,13 @@ const Index = () => {
         <div className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl flex flex-col md:text-left text-center">
-
               <h1
                 className="text-5xl md:text-7xl font-bold text-blue-500 mb-6 animate-fade-in "
                 style={{ animationDelay: "0.4s" }}
               >
-                <span className="text-orange-400">O</span><span className="text-white">.</span>Tech <span className="text-white"> Pvt. Ltd. </span>
+                <span className="text-orange-400">O</span>
+                <span className="text-white">.</span>Tech{" "}
+                <span className="text-white"> Pvt. Ltd. </span>
               </h1>
 
               <p
@@ -98,6 +96,15 @@ const Index = () => {
                 style={{ animationDelay: "0.8s" }}
               >
                 <Button
+                  onClick={() => {
+                    const section = document.getElementById("service-section");
+                    if (section) {
+                      section.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }
+                  }}
                   size="lg"
                   className="group bg-blue-600 text-white hover:bg-blue-700 hover-scale transform transition-all duration-300 hover:shadow-lg"
                 >
@@ -178,7 +185,7 @@ const Index = () => {
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
 
       {/* Services Grid */}
-      <section className="py-20 bg-accent">
+      <section className="py-20 bg-accent" id="service-section">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-left mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
@@ -302,39 +309,52 @@ const Index = () => {
       <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600">Testimonials</h2>
-            <h3 className="text-2xl font-bold text-gray-800">The Voice of Our Customers</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
+              Testimonials
+            </h2>
+            <h3 className="text-2xl font-bold text-gray-800">
+              The Voice of Our Customers
+            </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Text Testimonial 1 */}
             <div className="bg-white rounded-lg shadow-md p-6 relative">
-              <div className="absolute top-4 right-4 ">
-              </div>
+              <div className="absolute top-4 right-4 "></div>
               <h3 className="font-semibold text-lg">Noyana Syacchyon</h3>
               <p className="text-sm text-gray-600">Project Lead - NELP</p>
               <br />
-              <p className="text-gray-700 mb-4">"O.Tech is more than just a company. With their help, we could deliver electricity to the toughest areas of Nepal, making the country brighter, safer, and more developed.""</p>
+              <p className="text-gray-700 mb-4">
+                "O.Tech is more than just a company. With their help, we could
+                deliver electricity to the toughest areas of Nepal, making the
+                country brighter, safer, and more developed.""
+              </p>
             </div>
 
             {/* Text Testimonial 2 */}
             <div className="bg-white rounded-lg shadow-md p-6 relative">
-              <div className="absolute top-4 right-4 ">
-
-              </div>
+              <div className="absolute top-4 right-4 "></div>
               <h3 className="font-semibold text-lg">Prajwal Ojha</h3>
-              <p className="text-sm text-gray-600">CEO - OGBB International Law Firm</p>
+              <p className="text-sm text-gray-600">
+                CEO - OGBB International Law Firm
+              </p>
               <br />
-              <p className="text-gray-700 mb-4">O.Tech took care of our office building construction very smoothly. With a set of highly experienced team members, together they give you the best service available in Nepal"</p>
+              <p className="text-gray-700 mb-4">
+                O.Tech took care of our office building construction very
+                smoothly. With a set of highly experienced team members,
+                together they give you the best service available in Nepal"
+              </p>
             </div>
 
             {/* Text Testimonial 3 */}
             <div className="bg-white rounded-lg shadow-md p-6 relative">
-              <div className="absolute top-4 right-4">
-              </div>
+              <div className="absolute top-4 right-4"></div>
               <h3 className="font-semibold text-lg">Kartabya Aryal</h3>
               <p className="text-sm text-gray-600">CEO - Visual Workshop</p>
               <br />
-              <p className="text-gray-700 mb-4">"We had a dream of turning our offices fully solar powered. I'm glad we found O.Tech to get it done. Very well done!"</p>
+              <p className="text-gray-700 mb-4">
+                "We had a dream of turning our offices fully solar powered. I'm
+                glad we found O.Tech to get it done. Very well done!"
+              </p>
             </div>
           </div>
         </div>
@@ -364,7 +384,7 @@ const Index = () => {
         </div>
       </section>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
-    </Layout >
+    </Layout>
   );
 };
 export default Index;
