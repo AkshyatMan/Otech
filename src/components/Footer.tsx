@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="h-4 w-4 text-gray-300" />
-                <span>Sanepa, Lalitpur, Nepal</span>
+                <span>Neer Bhawan Marg, Sanepa, Lalitpur, Nepal</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="h-4 w-4 text-gray-300" />
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
             <div className="space-y-2 text-sm text-gray-300">
               <p>Branch Locations:</p>
-              <p>Kathmandu Valley: Sanepa, Swet Binayak Marg</p>
+              <p>Kathmandu Valley: Neer Bhawan Marg, Sanepa, Lalitpur</p>
               <p>Outside Valley: Pokhara, Nepalgunj, Biratnagar</p>
             </div>
           </div>

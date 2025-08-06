@@ -25,10 +25,10 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src={otechLogo} 
-              alt="O.Tech Logo" 
-              className="h-20 w-auto" 
+            <img
+              src={otechLogo}
+              alt="O.Tech Logo"
+              className="h-20 w-auto"
             />
             <div className="text-xs text-muted-foreground text-white">Since 2008</div>
           </Link>
