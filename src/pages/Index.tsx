@@ -7,6 +7,7 @@ import SwiggleLine from "@/components/SwiggleLine";
 import CounterAnimation from "@/components/CounterAnimation";
 import heroVideo from "/Construction.webm";
 import servivesLogo from "@/assets/ServicesLogo.png";
+import { useInView } from "react-intersection-observer";
 
 import telecommunication from "../assets/telecommunication.png";
 import Construction from "../assets/construction.png";
@@ -56,7 +57,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center -mt-16">
+      <SectionWithFade className="relative h-screen w-full flex items-center -mt-16">
         <video
           className="absolute top-0 left-0 object-cover w-full h-full"
           src={heroVideo}
@@ -124,9 +125,9 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
-      <SwiggleLine className="w-full h-20 text-accent -mt-16" />
-      <section className="py-20">
+      </SectionWithFade>
+      <SwiggleLine className="w-full h-20 text-white -mt-16" />
+      <SectionWithFade className="py-20">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-4xl font-bold text-left mb-8 text-blue-600">
@@ -155,11 +156,11 @@ const Index = () => {
             />
           </div>
         </div>
-      </section>
+      </SectionWithFade>
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
 
       {/* Enablers for your business growth (Counter Animation Section) */}
-      <section className="py-20">
+      <SectionWithFade className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-left mb-8 text-blue-600">
             Enablers for your infrastructure growth
@@ -181,11 +182,11 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWithFade>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
 
       {/* Services Grid */}
-      <section className="py-20 bg-accent" id="service-section">
+      <SectionWithFade className="py-20 bg-accent" id="service-section">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-left mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
@@ -232,9 +233,9 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionWithFade>
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
-      <section className="py-20">
+      <SectionWithFade className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
@@ -302,11 +303,11 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithFade>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-accent">
+      <SectionWithFade className="py-20 bg-accent" id="service-section">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
@@ -359,11 +360,11 @@ const Index = () => {
           </div>
         </div>
         <SwiggleLine className="w-full h-20 text-accent -mt-16" />
-      </section>
+      </SectionWithFade>
 
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
       {/* CTA Section */}
-      <section className="py-20 bg-accent">
+      <SectionWithFade className="py-20 bg-accent" id="contact-section">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600">
             Ready to Partner With Us?
@@ -382,9 +383,26 @@ const Index = () => {
             </Button>
           </Link>
         </div>
-      </section>
+      </SectionWithFade>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
     </Layout>
+  );
+};
+
+const SectionWithFade = ({ children, className, id }: { children: React.ReactNode; className?: string; id?: string }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <section
+      ref={ref}
+      id={id}
+      className={`${className} transition-opacity ease-in-out duration-1500 ${inView ? 'opacity-100' : 'opacity-0'}`}
+    >
+      {children}
+    </section>
   );
 };
 export default Index;

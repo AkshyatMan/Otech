@@ -7,8 +7,12 @@ import contact from "/contact.png"
 import Layout from "@/components/Layout";
 import { MapPin, Phone, Mail, Clock, Building2, Send } from "lucide-react";
 import SwiggleLine from "@/components/SwiggleLine";
+import React, { useEffect } from 'react';
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const contactInfo = [
     {
       icon: <Building2 className="h-6 w-6 text-blue-500" />,
@@ -179,7 +183,7 @@ const Contact = () => {
       <section className="py-16 bg-accent">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-500 mb-4">Our Locations</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Locations</h2>
             <p className="text-lg text-muted-foreground">Serving clients across Nepal with strategic branch locations</p>
           </div>
 

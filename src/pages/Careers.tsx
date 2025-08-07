@@ -57,7 +57,7 @@ const Careers = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-96 w-full flex items-center -mt-16">
+      <section className="relative h-[calc(50vh-64px)] w-full flex items-center -mt-16">
         <img
           src={CareerBanner}
           alt="Career illustration"
@@ -184,7 +184,7 @@ const Careers = () => {
                 touch.
               </p>
               <a
-                href="/careers/notify"
+                href="/contact"
                 className="inline-block text-primary underline hover:text-primary/80 transition"
               >
                 Notify me about future jobs
