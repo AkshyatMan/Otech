@@ -20,7 +20,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-transparent border-b border-transparent sticky top-0 z-[100] hover:bg-background/30 hover:border-border transition-all duration-300" style={{ backdropFilter: 'blur(5px)' }}>
+    <nav className="bg-black/40 sticky top-0 z-[100] transition-all duration-300" style={{ backdropFilter: 'blur(5px)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -39,7 +39,7 @@ const Navigation = () => {
               <Link key={item.path} to={item.path}>
                 <Button
                   variant="ghost"
-                  className={`smooth-transition ${isActive(item.path) ? 'text-white' : 'text-white/70 hover:text-black'}`}
+                  className={`smooth-transition ${isActive(item.path) ? 'text-blue-400' : 'text-white/70 hover:text-black'}`}
                 >
                   {item.name}
                 </Button>

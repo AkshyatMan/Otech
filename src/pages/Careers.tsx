@@ -5,8 +5,35 @@ import { ArrowRight, TrendingUp, Scale, User } from "lucide-react";
 import Layout from "@/components/Layout";
 import Career from "@/assets/Career-image.png";
 import CareerBanner from "@/assets/CareerBanner.png";
+import { useState, useEffect } from "react";
 
 const Careers = () => {
+  const [enlargedImage, setEnlargedImage] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (enlargedImage !== null) {
+      const timer = setTimeout(() => {
+        setEnlargedImage(null);
+      }, 3000); // Enlarge for 3 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [enlargedImage]);
+
+  const handleImageClick = (index: number) => {
+    setEnlargedImage(index);
+  };
+
+  const images = [
+    { src: Career, alt: "Life at Otech 1" },
+    { src: CareerBanner, alt: "Life at Otech 2" },
+    { src: Career, alt: "Life at Otech 3" },
+    { src: CareerBanner, alt: "Life at Otech 4" },
+    { src: Career, alt: "Life at Otech 5" },
+    { src: CareerBanner, alt: "Life at Otech 6" },
+    { src: Career, alt: "Life at Otech 7" },
+    { src: CareerBanner, alt: "Life at Otech 8" },
+  ];
+
   const reasons = [
     {
       icon: <TrendingUp className="h-12 w-12" />,
@@ -164,6 +191,35 @@ const Careers = () => {
               </a>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Life at Otech Photo Gallery */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-12 text-center">
+            Life at Otech
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`relative overflow-hidden rounded-lg shadow-md cursor-pointer transition-all duration-300 ease-in-out
+                  ${index === 0 ? 'col-span-2 row-span-2' : ''} // Example of larger image
+                  ${index === 1 ? 'col-span-2' : ''}
+                  ${enlargedImage === index ? 'scale-110 z-20' : 'scale-100'}
+                `}
+                onClick={() => handleImageClick(index)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover aspect-square animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
