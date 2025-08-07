@@ -1,38 +1,54 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Scale, User } from "lucide-react";
 import Layout from "@/components/Layout";
 import Career from "@/assets/Career-image.png";
 import CareerBanner from "@/assets/CareerBanner.png";
-import { useState, useEffect } from "react";
+import Team from "@/assets/lifeAtOtech/Team.png";
+import tokenOflove from "@/assets/lifeAtOtech/tokenOflove.png";
+import meeting from "@/assets/lifeAtOtech/meeting.png";
+import birthday from "@/assets/lifeAtOtech/birthday.png";
+import teamMeeting from "@/assets/lifeAtOtech/teamMeeting.png";
+import meeting2 from "@/assets/lifeAtOtech/meeting2.png";
+import standing from "@/assets/lifeAtOtech/standing.png";
+import Conference from "@/assets/lifeAtOtech/Conference.png";
+import { useState } from "react";
 
 const Careers = () => {
-  const [enlargedImage, setEnlargedImage] = useState<number | null>(null);
-
-  useEffect(() => {
-    if (enlargedImage !== null) {
-      const timer = setTimeout(() => {
-        setEnlargedImage(null);
-      }, 3000); // Enlarge for 3 seconds
-      return () => clearTimeout(timer);
-    }
-  }, [enlargedImage]);
-
-  const handleImageClick = (index: number) => {
-    setEnlargedImage(index);
-  };
+  const [showModal, setShowModal] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    { src: Career, alt: "Life at Otech 1" },
-    { src: CareerBanner, alt: "Life at Otech 2" },
-    { src: Career, alt: "Life at Otech 3" },
-    { src: CareerBanner, alt: "Life at Otech 4" },
-    { src: Career, alt: "Life at Otech 5" },
-    { src: CareerBanner, alt: "Life at Otech 6" },
-    { src: Career, alt: "Life at Otech 7" },
-    { src: CareerBanner, alt: "Life at Otech 8" },
+    { src: Team, alt: "Life at Otech 1" },
+    { src: tokenOflove, alt: "Life at Otech 2" },
+    { src: meeting, alt: "Life at Otech 3" },
+    { src: birthday, alt: "Life at Otech 3" },
+    { src: teamMeeting, alt: "Life at Otech 3" },
+    { src: meeting2, alt: "Life at Otech 3" },
+    { src: standing, alt: "Life at Otech 3" },
+    { src: Conference, alt: "Life at Otech 3" },
   ];
+
+  const handleImageClick = (index: number) => {
+    setCurrentImageIndex(index);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
   const reasons = [
     {
@@ -65,7 +81,7 @@ const Careers = () => {
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/75"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content container aligned with navigation */}
         <div className="relative z-10 w-full">
@@ -200,28 +216,76 @@ const Careers = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-12 text-center">
             Life at Otech
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className={`relative overflow-hidden rounded-lg shadow-md cursor-pointer transition-all duration-300 ease-in-out
-                  ${index === 0 ? 'col-span-2 row-span-2' : ''} // Example of larger image
-                  ${index === 1 ? 'col-span-2' : ''}
-                  ${enlargedImage === index ? 'scale-110 z-20' : 'scale-100'}
-                `}
-                onClick={() => handleImageClick(index)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover aspect-square animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                />
-              </div>
-            ))}
+          <div className="flex flex-col gap-4">
+            {/* First image in a single row */}
+            <div className="w-full">
+              <img
+                src={images[0].src}
+                alt={images[0].alt}
+                className="w-full h-full object-cover aspect-video rounded-lg shadow-md"
+              />
+            </div>
+            {/* Remaining images in a grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {images.slice(1).map((image, index) => (
+                <div
+                  key={index}
+                  className={`relative overflow-hidden rounded-lg shadow-md cursor-pointer transition-transform duration-300 ease-in-out`}
+                  onClick={() => handleImageClick(index + 1)} // Adjust index for sliced array
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover aspect-square animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {showModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          onClick={handleCloseModal}
+        >
+          <div
+            className="relative max-w-3xl max-h-full mx-auto p-4"
+            onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking inside
+          >
+            <div className="">
+              <button
+                className="absolute top-2 right-2 text-white text-3xl font-bold z-10"
+                onClick={handleCloseModal}
+              >
+                &times;
+              </button>
+            </div>
+            <img
+              src={images[currentImageIndex].src}
+              alt={images[currentImageIndex].alt}
+              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
+            />
+            <div>
+              <button
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold opacity-75 hover:opacity-100"
+                onClick={handlePrevImage}
+              >
+                &#8249;
+              </button>
+            </div>
+            <button
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold opacity-75 hover:opacity-100"
+              onClick={handleNextImage}
+            >
+              &#8250;
+            </button>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 };
