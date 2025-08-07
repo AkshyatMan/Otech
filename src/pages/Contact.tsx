@@ -11,7 +11,7 @@ import SwiggleLine from "@/components/SwiggleLine";
 const Contact = () => {
   const contactInfo = [
     {
-      icon: <Building2 className="h-6 w-6" />,
+      icon: <Building2 className="h-6 w-6 text-blue-500" />,
       title: "Head Office",
       details: [
         "Neer Bhawan Marg",
@@ -20,7 +20,7 @@ const Contact = () => {
       ]
     },
     {
-      icon: <Phone className="h-6 w-6" />,
+      icon: <Phone className="h-6 w-6 text-blue-500" />,
       title: "Phone",
       details: [
         "+01-5153175",
@@ -28,7 +28,7 @@ const Contact = () => {
       ]
     },
     {
-      icon: <Mail className="h-6 w-6" />,
+      icon: <Mail className="h-6 w-6 text-blue-500" />,
       title: "Email",
       details: [
         "info@otech.com.np",
@@ -36,7 +36,7 @@ const Contact = () => {
       ]
     },
     {
-      icon: <Clock className="h-6 w-6" />,
+      icon: <Clock className="h-6 w-6 text-blue-500" />,
       title: "Business Hours",
       details: [
         "Sunday - Friday: 10:00 AM - 6:00 PM",
@@ -187,27 +187,27 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-center text-Black-400 mb-6">Inside Kathmandu valley</h3>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Corporate Office</h4>
                 <p className="text-muted-foreground">Dhobighat, Lalitpur</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Branch Office</h4>
                 <p className="text-muted-foreground">Nakhu, Lalitpur</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Branch Office</h4>
                 <p className="text-muted-foreground">Balaju, Kathmandu</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Branch Office</h4>
                 <p className="text-muted-foreground">Chabahil, Kathmandu</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Branch Office</h4>
                 <p className="text-muted-foreground">Lokanthali Kathmandu</p>
               </div>
@@ -215,27 +215,27 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-center text-black-400 mb-6 mt-12">Outside Kathmandu valley</h3>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Regional Office</h4>
                 <p className="text-muted-foreground">Pokhara</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Regional Office</h4>
                 <p className="text-muted-foreground">Nepalgunj</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Regional Office</h4>
                 <p className="text-muted-foreground">Biratnagar</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Regional Office</h4>
                 <p className="text-muted-foreground">Dhangadi</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-2" />
+                <MapPin className="h-10 w-10 text-blue-500 mx-auto mb-2" />
                 <h4 className="font-semibold text-primary">Regional Office</h4>
                 <p className="text-muted-foreground">Birtamode</p>
               </div>
