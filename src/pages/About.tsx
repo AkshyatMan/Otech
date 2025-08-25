@@ -36,7 +36,7 @@ const About = () => {
       name: "Binod Pokhrel",
       role: "Director",
       description: "Infrastructure / QSB / Telecom",
-      image: "/binodPokhrel.jpg"
+      image: "/binodPokhrel.png"
     },
   ];
 
