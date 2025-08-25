@@ -3,7 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import contact from "/contact.png"
+// import contact from "/contact.png"
+import contact from "/contactUs.webp"
 import Layout from "@/components/Layout";
 import { MapPin, Phone, Mail, Clock, Building2, Send } from "lucide-react";
 import SwiggleLine from "@/components/SwiggleLine";
@@ -60,7 +61,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-[calc(50vh-64px)] w-full flex items-center -mt-16">
+      <section className="relative h-[calc(80vh-64px)] w-full flex items-center -mt-16">
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${contact})` }}

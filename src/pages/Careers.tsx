@@ -2,8 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Scale, User } from "lucide-react";
 import Layout from "@/components/Layout";
-import Career from "@/assets/Career-image.png";
-import CareerBanner from "@/assets/CareerBanner.png";
+// import Career from "@/assets/Career-image.png";
+// import CareerBanner from "@/assets/CareerBanner.png";
+import CareerBanner from "/career.webp";
+import Career from "/Artistic.webp";
 import Team from "@/assets/lifeAtOtech/Team.png";
 import tokenOflove from "@/assets/lifeAtOtech/tokenOflove.png";
 import meeting from "@/assets/lifeAtOtech/meeting.png";
@@ -73,7 +75,7 @@ const Careers = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-[calc(50vh-64px)] w-full flex items-center -mt-16">
+      <section className="relative h-[calc(80vh-64px)] w-full flex items-center -mt-16">
         <img
           src={CareerBanner}
           alt="Career illustration"

@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
-import AboutUs from "/AboutUs.jpg";
+import AboutUs from "/AboutUs.webp";
 import { Calendar, Award, Users, Target } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import SwiggleLine from "@/components/SwiggleLine";
@@ -42,7 +42,7 @@ const About = () => {
 
   return (
     <Layout>
-      <section className="relative h-[calc(50vh-64px)] w-full flex items-center -mt-16">
+      <section className="relative h-[calc(80vh-64px)] w-full flex items-center -mt-16">
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${AboutUs})` }}

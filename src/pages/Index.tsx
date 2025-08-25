@@ -57,7 +57,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <SectionWithFade className="relative h-screen w-full flex items-center -mt-16">
+      <section className="relative h-screen w-full flex items-center -mt-16">
         <video
           className="absolute top-0 left-0 object-cover w-full h-full"
           src={heroVideo}
@@ -125,14 +125,15 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </SectionWithFade>
+      </section>
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
-      <SectionWithFade className="py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-4xl font-bold text-left mb-8 text-blue-600">
               About Us
             </h2>
+
             <h3 className="text-2xl font-bold mb-4">
               Nepal's most trusted technical solution provider across telecom,
               construction, energy, and trade sectors.
@@ -148,15 +149,17 @@ const Index = () => {
               and sustainable solutions.
             </p>
           </div>
-          <div>
-            <img
-              src={servivesLogo}
-              alt="Logistics Industry"
-              className="rounded-lg w-full h-auto object-cover"
-            />
-          </div>
+          <SectionWithFade className="py-20">
+            <div>
+              <img
+                src={servivesLogo}
+                alt="Logistics Industry"
+                className="rounded-lg w-full h-auto object-cover"
+              />
+            </div>
+          </SectionWithFade>
         </div>
-      </SectionWithFade>
+      </section>
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
 
       {/* Enablers for your business growth (Counter Animation Section) */}
@@ -183,65 +186,79 @@ const Index = () => {
           </div>
         </div>
       </SectionWithFade>
-      <SwiggleLine className="w-full h-20 text-accent -mt-16" />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
       {/* Services Grid */}
-      <SectionWithFade className="py-20 bg-accent" id="service-section">
+
+
+      <SwiggleLine className="w-full h-20 text-accent -mt-16" />
+      <section className="py-20 bg-accent" id="service-section">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-left mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
+            <h2 className="text-4xl font-bold text-left mb-8 text-blue-600">
               Our Service Areas
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-2xl font-bold mb-4">
               Comprehensive technical solutions across multiple sectors,
               delivering excellence since 2008.
             </p>
           </div>
+          <SectionWithFade className="py-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              {services.map((service, index) => (
+                <Link key={index} to={service.path}>
+                  <Card className="h-full hover:shadow-lg smooth-transition group cursor-pointer bg-transparent border-0">
+                    <CardContent className="p-6 flex items-start">
+                      {" "}
+                      {/* Added flex and items-start */}
+                      <div className="mr-6 flex-shrink-0">
+                        {" "}
+                        {/* Added mr-6 and flex-shrink-0 */}
+                        {/* Make icon larger - adjust 'h-20 w-20' as needed */}
+                        <div className="text-blue-500 h-20 w-20 flex items-center justify-center">
+                          {service.icon}
+                        </div>
+                      </div>
+                      <div>
+                        {" "}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {services.map((service, index) => (
-              <Link key={index} to={service.path}>
-                <Card className="h-full hover:shadow-lg smooth-transition group cursor-pointer bg-transparent border-0">
-                  <CardContent className="p-6 flex items-start">
-                    {" "}
-                    {/* Added flex and items-start */}
-                    <div className="mr-6 flex-shrink-0">
-                      {" "}
-                      {/* Added mr-6 and flex-shrink-0 */}
-                      {/* Make icon larger - adjust 'h-20 w-20' as needed */}
-                      <div className="text-blue-500 h-20 w-20 flex items-center justify-center">
-                        {service.icon}
+                        {/* This div will contain the text content */}
+                        <h3 className="text-xl font-semibold text-primary mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4">
+                          {service.description}
+                        </p>
+                        <div className="flex items-center text-primary group-hover:text-accent-foreground transition-colors">
+                          <span className="text-sm font-medium">Learn More</span>
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      {" "}
-                      {/* This div will contain the text content */}
-                      <h3 className="text-xl font-semibold text-primary mb-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4">
-                        {service.description}
-                      </p>
-                      <div className="flex items-center text-primary group-hover:text-accent-foreground transition-colors">
-                        <span className="text-sm font-medium">Learn More</span>
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </SectionWithFade>
         </div>
-      </SectionWithFade>
+      </section>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
-      <SectionWithFade className="py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
+            <h2 className="text-4xl md:text-4xl font-bold mb-8 text-blue-600">
               Our Clients
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-2xl font-bold mb-4">
               We've worked together with a number of national and international
               brands.
             </p>
@@ -303,11 +320,16 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </SectionWithFade>
+      </section>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
 
       {/* Testimonials Section */}
-      <SectionWithFade className="py-20 bg-accent" id="service-section">
+      <section className="py-20 bg-accent" id="service-section">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
@@ -317,62 +339,70 @@ const Index = () => {
               The Voice of Our Customers
             </h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Text Testimonial 1 */}
-            <div className="bg-white rounded-lg shadow-md p-6 relative">
-              <div className="absolute top-4 right-4 "></div>
-              <h3 className="font-semibold text-lg">Noyana Syacchyon</h3>
-              <p className="text-sm text-gray-600">Project Lead - NELP</p>
-              <br />
-              <p className="text-gray-700 mb-4">
-                "O.Tech is more than just a company. With their help, we could
-                deliver electricity to the toughest areas of Nepal, making the
-                country brighter, safer, and more developed.""
-              </p>
-            </div>
+          <SectionWithFade className="py-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Text Testimonial 1 */}
+              <div className="bg-white rounded-lg shadow-md p-6 relative">
+                <div className="absolute top-4 right-4 "></div>
+                <h3 className="font-semibold text-lg">Noyana Syacchyon</h3>
+                <p className="text-sm text-gray-600">Project Lead - NELP</p>
+                <br />
+                <p className="text-gray-700 mb-4">
+                  "O.Tech is more than just a company. With their help, we could
+                  deliver electricity to the toughest areas of Nepal, making the
+                  country brighter, safer, and more developed.""
+                </p>
+              </div>
 
-            {/* Text Testimonial 2 */}
-            <div className="bg-white rounded-lg shadow-md p-6 relative">
-              <div className="absolute top-4 right-4 "></div>
-              <h3 className="font-semibold text-lg">Prajwal Ojha</h3>
-              <p className="text-sm text-gray-600">
-                CEO - OGBB International Law Firm
-              </p>
-              <br />
-              <p className="text-gray-700 mb-4">
-                O.Tech took care of our office building construction very
-                smoothly. With a set of highly experienced team members,
-                together they give you the best service available in Nepal"
-              </p>
-            </div>
+              {/* Text Testimonial 2 */}
+              <div className="bg-white rounded-lg shadow-md p-6 relative">
+                <div className="absolute top-4 right-4 "></div>
+                <h3 className="font-semibold text-lg">Prajwal Ojha</h3>
+                <p className="text-sm text-gray-600">
+                  CEO - OGBB International Law Firm
+                </p>
+                <br />
+                <p className="text-gray-700 mb-4">
+                  O.Tech took care of our office building construction very
+                  smoothly. With a set of highly experienced team members,
+                  together they give you the best service available in Nepal"
+                </p>
+              </div>
 
-            {/* Text Testimonial 3 */}
-            <div className="bg-white rounded-lg shadow-md p-6 relative">
-              <div className="absolute top-4 right-4"></div>
-              <h3 className="font-semibold text-lg">Kartabya Aryal</h3>
-              <p className="text-sm text-gray-600">CEO - Visual Workshop</p>
-              <br />
-              <p className="text-gray-700 mb-4">
-                "We had a dream of turning our offices fully solar powered. I'm
-                glad we found O.Tech to get it done. Very well done!"
-              </p>
+              {/* Text Testimonial 3 */}
+              <div className="bg-white rounded-lg shadow-md p-6 relative">
+                <div className="absolute top-4 right-4"></div>
+                <h3 className="font-semibold text-lg">Kartabya Aryal</h3>
+                <p className="text-sm text-gray-600">CEO - Visual Workshop</p>
+                <br />
+                <p className="text-gray-700 mb-4">
+                  "We had a dream of turning our offices fully solar powered. I'm
+                  glad we found O.Tech to get it done. Very well done!"
+                </p>
+              </div>
             </div>
-          </div>
+          </SectionWithFade>
         </div>
         <SwiggleLine className="w-full h-20 text-accent -mt-16" />
-      </SectionWithFade>
+      </section>
 
       <SwiggleLine className="w-full h-20 text-white -mt-16" />
       {/* CTA Section */}
-      <SectionWithFade className="py-20 bg-accent" id="contact-section">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <section className="py-20 bg-accent" id="contact-section">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600">
             Ready to Partner With Us?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-1xl font-bold text-gray-800">
             Let's discuss how O.Tech can deliver total technical solutions for
             your next project.
           </p>
+          <br></br>
           <Link to="/contact">
             <Button
               size="lg"
@@ -383,26 +413,39 @@ const Index = () => {
             </Button>
           </Link>
         </div>
-      </SectionWithFade>
+      </section>
       <SwiggleLine className="w-full h-20 text-accent -mt-16" />
-    </Layout>
+    </Layout >
   );
 };
 
-const SectionWithFade = ({ children, className, id }: { children: React.ReactNode; className?: string; id?: string }) => {
+const SectionWithFade = ({
+  children,
+  className,
+  id,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+}) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.6,
   });
 
   return (
     <section
       ref={ref}
       id={id}
-      className={`${className} transition-opacity ease-in-out duration-1500 ${inView ? 'opacity-100' : 'opacity-0'}`}
+      className={`
+        ${className} 
+        transform transition-all duration-1000 ease-out
+        ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}
+      `}
     >
       {children}
     </section>
   );
 };
+
 export default Index;

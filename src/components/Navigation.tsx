@@ -39,7 +39,7 @@ const Navigation = () => {
               <Link key={item.path} to={item.path}>
                 <Button
                   variant="ghost"
-                  className={`smooth-transition ${isActive(item.path) ? 'text-blue-400' : 'text-white/70 hover:text-black'}`}
+                  className={`smooth-transition relative ${isActive(item.path) ? 'text-blue-400 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400' : 'text-white/70 hover:text-blue-400'}`} 
                 >
                   {item.name}
                 </Button>
@@ -70,8 +70,8 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   <Button
-                    variant={isActive(item.path) ? "secondary" : "ghost"}
-                    className="w-full justify-start"
+                    variant="ghost"
+                    className={`w-full justify-start ${isActive(item.path) ? 'text-blue-400' : 'text-white/70 hover:text-blue-400'}`}
                   >
                     {item.name}
                   </Button>
